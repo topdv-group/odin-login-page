@@ -20,12 +20,45 @@ body{
 
 .image-div{
     display: flex;
+    position: relative;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 img{
     width: 40vw;
     height: 100vh;
+    z-index: 2;
+    object-fit: cover;
+    
 }
-
+.odin-logo{
+    position: absolute;
+    z-index: 3;
+    background-color: black;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 16%;
+    background-color: rgba(0, 0, 0, 0.4); 
+}
+.odin-logo img{
+    width: 20%;
+    height: 90%;
+    object-fit: contain;
+    color: white;
+}
+@font-face {
+    font-family: 'odin';
+    src: url(./fonts/Norsebold.otf);
+   
+}
+.odin-logo h4{
+    font-family: 'odin', sans-serif;
+    color: white;
+    font-size: 2.5rem;
+}
 .login-form-div{
     display: flex;
     flex-direction: column;
@@ -58,12 +91,6 @@ img{
 
 }
 
-
-
-caption{
-    display: flex;
-    margin-top: 0px;
-}
 .downer-div{
     background-color: rgb(255, 253, 253);
     display: flex;
@@ -73,7 +100,7 @@ caption{
     gap: 4%;
 }
 .downer-div button {
-    background-color: rgba(3, 56, 3,0.6);
+    background-color: #596D48;
     border: none;
     color: white;
     width: 20%;
@@ -92,7 +119,9 @@ caption{
     padding: 1%;
     margin-left:4%;
 }
-
+.downer-div button:hover{
+    cursor: pointer;
+}
 form{
     display: flex;
     justify-content: center;
@@ -113,6 +142,9 @@ form{
 .right-form-group{
     gap: 5px;
     margin-top: 10%;
+}
+.left-form-group h2{
+    color: gray;
 }
 
 label{
